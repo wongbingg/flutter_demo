@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/my_app_state.dart';
 import 'package:provider/provider.dart';
 
-class FavoritePage extends StatelessWidget {
+class FirstTestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI/FavoritePage.dart';
-import 'package:flutter_application_1/UI/GeneratorPage.dart';
+import 'package:flutter_application_1/UI/favorite_page.dart';
+import 'package:flutter_application_1/UI/first_test_page.dart';
+import 'package:flutter_application_1/UI/generator_page.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -19,6 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
         break;
       case 1:
         page = FavoritePage();
+        break;
+      case 2:
+        page = FirstTestPage();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -40,10 +44,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     icon: Icon(Icons.favorite),
                     label: Text('Favorites'),
                   ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.abc),
+                    label: Text('FirstTestPage'),
+                  ),
                 ],
                 selectedIndex: selectedIndex,
                 onDestinationSelected: (value) {
-                  setState(() {  // Stateful 한 성질을 가지는 class 에서 사용하는 함수
+                  setState(() {
+                    // Stateful 한 성질을 가지는 class 에서 사용하는 함수
                     selectedIndex = value;
                   });
                 },

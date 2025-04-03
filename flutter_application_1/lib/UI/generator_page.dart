@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI/BigCard.dart';
-import 'package:flutter_application_1/MyAppState.dart';
+import 'package:flutter_application_1/UI/big_card.dart';
+import 'package:flutter_application_1/my_app_state.dart';
 import 'package:provider/provider.dart';
 
 class GeneratorPage extends StatelessWidget {
