@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
+  var current2 = '';
 
   void getNext() {
     current = WordPair.random();
+    notifyListeners();
+  }
+
+  void fetchNext() {
+    current2 = 'Fetched String Data';
     notifyListeners();
   }
 

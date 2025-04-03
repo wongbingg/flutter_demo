@@ -6,12 +6,20 @@ class FirstTestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
-    return ListView(
+    var data = appState.current2;
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Padding(padding: const EdgeInsets.all(20), child: Text('You have ${appState.favorites.length} favorites'),),
-        for (var text in appState.favorites)
-        ListTile(leading: Icon(Icons.favorite), title: Text(text.asLowerCase),)
-      ]
+        Text(data),
+        SizedBox(height: 30,),
+        ElevatedButton(
+          onPressed: () {
+            appState.fetchNext();
+          },
+          child: Text('Fetch'),
+        ),
+      ],
     );
   }
 }
